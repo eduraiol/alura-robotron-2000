@@ -29,6 +29,32 @@ main {
     gap: 1vw;
 }
 
+p {
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+}
+
+fieldset {
+    color: #FFFFFF;
+    display: inline;
+    border: none;
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+    border-left: 5px solid var(--main-cinza);
+    background: rgba(0,0,0,0.6);
+}
+
+legend {
+    text-align: start;
+    font-weight: bold;
+    float: left;
+    margin-bottom: .5em;
+    width: 100%;
+    padding: 0px 0px 0px 20px;
+}
+
 .robotron {
     background: url(../img/estrutura.png) no-repeat;
     background-position: center center;
@@ -41,6 +67,14 @@ main {
     height: 110%;
     z-index: 1;
     position: absolute;
+    left: -20%;
+    top: -5%;
+}
+
+.image-robo {
+    height: 110%;
+    z-index: 1;
+    position: relative;
     left: -20%;
     top: -5%;
 }
@@ -143,12 +177,14 @@ main {
     cursor: pointer;
 }
 
+.cor-robo {
+    font-size: 1.5em;
+}
+
 .producao:hover {
     background: var(--main-preto);
     color: var(--main-branco)
 }
-
-
 
 /****************************** Estatísticas *****/
 .estatisticas {

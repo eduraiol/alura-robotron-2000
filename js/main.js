@@ -57,3 +57,14 @@ function atualizaEstatistica(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+
+const radio = document.getElementsByName('robotron-image');
+const robo = document.querySelector('.robo');
+radio.forEach( ( elemento, index ) => {
+    radio[index].addEventListener('change', () => {
+        if(elemento.checked){
+            const src = 'img/Robotron-'+elemento.value+'.png';
+            robo.setAttribute('src', src);
+        }
+    });
+});
